@@ -1,78 +1,135 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-header nav ul li {
-    margin: 0 10px;
-}
+        header nav ul li {
+            margin: 0 10px;
+        }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-header nav ul li a:hover {
-    color: #ccc;
-}
+        header nav ul li a:hover {
+            color: #ccc;
+        }
 
-/* Main Content Styles */
-.hero {
-    background-color: #f0f0f0;
-    padding: 80px 0;
-    text-align: center;
-}
+        /* Main Content Styles */
+        .hero {
+            background-color: #f0f0f0;
+            padding: 80px 0;
+            text-align: center;
+        }
 
-.features {
-    padding: 60px 0;
-    text-align: center;
-}
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-.about {
-    background-color: #f0f0f0;
-    padding: 60px 0;
-    text-align: center;
-}
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+        .features {
+            padding: 60px 0;
+            text-align: center;
+        }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+        .features h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
 
-    header nav ul li {
-        margin: 10px 0;
-    }
-}
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 40px;
+        }
+
+        .features ul li {
+            font-size: 18px;
+        }
+
+        .about {
+            background-color: #f0f0f0;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .features h2, .about h2 {
+                font-size: 24px;
+            }
+
+            .features ul {
+                grid-template-columns: 1fr;
+            }
+
+            .features ul li, .about p {
+                font-size: 16px;
+            }
+        }
