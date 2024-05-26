@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="web.css">
+    <script src="respon.js"></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,13 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -29,7 +36,6 @@
             <div class="container">
                 <h2>Discover the Power of Responsive Design</h2>
                 <p>Our website adapts seamlessly to any device, ensuring a great user experience.</p>
-                <a href="#" class="btn">Learn More</a>
             </div>
         </section>
         <section class="features">
@@ -49,10 +55,31 @@
                 <p>We are a team of passionate web developers dedicated to creating exceptional websites.</p>
             </div>
         </section>
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea><br><br>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </section>
+        <section class="quote">
+            <div class="container">
+                <h2>Inspirational Quotes</h2>
+                <p id="quote"></p>
+                <button id="quote-button">Get a new quote</button>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2023 Responsive Webpage. All rights reserved.</p>
+            <p>&copy; 2024 My Responsive Webpage</p>
         </div>
     </footer>
 </body>
