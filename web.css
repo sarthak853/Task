@@ -1,4 +1,4 @@
-        /* Global Styles */
+/* Global Styles */
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
@@ -46,36 +46,9 @@
             text-align: center;
         }
 
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
         .features {
             padding: 60px 0;
             text-align: center;
-        }
-
-        .features h2 {
-            font-size: 28px;
-            margin-bottom: 40px;
-        }
-
-        .features ul {
-            list-style-type: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-gap: 40px;
-        }
-
-        .features ul li {
-            font-size: 18px;
         }
 
         .about {
@@ -84,13 +57,9 @@
             text-align: center;
         }
 
-        .about h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 18px;
+        .contact {
+            padding: 60px 0;
+            text-align: center;
         }
 
         /* Footer Styles */
@@ -99,7 +68,33 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            font-size: 14px;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: absolute;
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dropdown li {
+            margin: 10px 0;
+        }
+
+        .dropdown li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .dropdown li a:hover {
+            color: #ccc;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
         }
 
         /* Responsive Styles */
@@ -111,25 +106,5 @@
 
             header nav ul li {
                 margin: 10px 0;
-            }
-
-            .hero h2 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .features h2, .about h2 {
-                font-size: 24px;
-            }
-
-            .features ul {
-                grid-template-columns: 1fr;
-            }
-
-            .features ul li, .about p {
-                font-size: 16px;
             }
         }
