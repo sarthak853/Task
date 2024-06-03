@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="do_list.css">
+  <script src="do_list.js"></script>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTask">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    // JavaScript code to handle AJAX requests and update the task list
+    document.getElementById('addTask').addEventListener('click', function() {
+      var taskInput = document.getElementById('taskInput');
+      var taskText = taskInput.value;
+
+      // Send POST request to backend to add a new task
+      fetch('/todos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: taskText })
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Update the task list with the new task
+        var taskList = document.getElementById('taskList');
+        var newTask = document.createElement('li');
+        newTask.textContent = data.text;
+        taskList.appendChild(newTask);
+
+        taskInput.value = '';
+      })
+      .catch(error => console.error(error));
+    });
+
+    // Fetch tasks from backend on page load
+    fetch('/todos')
+      .then(response => response.json())
+      .then(data => {
+        // Update the task list with the tasks
+        var taskList = document.getElementById('taskList');
+        data.forEach(task => {
+          var newTask = document.createElement('li');
+          newTask.textContent = task;
+          taskList.appendChild(newTask);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
